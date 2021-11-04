@@ -1,0 +1,26 @@
+{
+  "name": "basic_calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "solana-test-validator -r",
+    "deploy": "cargo build-bpf && solana program deploy './target/deploy/basic_calculator.so' && ts-node ./client/main.ts",
+    "exit": "exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solana/web3.js": "^1.30.2",
+    "mz": "^2.7.0"
+  },
+  "devDependencies": {
+    "@solana/buffer-layout": "^3.0.0",
+    "@types/mz": "^2.7.4",
+    "borsh": "^0.6.0",
+    "buffer": "^6.0.3",
+    "yaml": "^1.10.2"
+  }
+}
